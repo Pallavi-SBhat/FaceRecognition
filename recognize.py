@@ -23,7 +23,7 @@ while True:
 
         label, confidence = recognizer.predict(face)
 
-        if confidence < 100:
+        if confidence < 50:
             name = label_dict[label]
             text = f"Access Granted: {name}"
             color = (0,255,0)
