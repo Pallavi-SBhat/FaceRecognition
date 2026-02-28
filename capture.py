@@ -1,10 +1,12 @@
 import cv2
 import os
 
+# Load Haar Cascade classifier for face detection
 face_cascade = cv2.CascadeClassifier(
     cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 )
 
+# Ask user name(folder will be created with this name)
 user_name = input("Enter user name: ")
 save_path = f"dataset/{user_name}"
 
@@ -32,5 +34,6 @@ while True:
     if cv2.waitKey(1) == 27:
         break
 
+# Release camera and close windows
 cap.release()
 cv2.destroyAllWindows()
