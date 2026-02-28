@@ -17,7 +17,7 @@ for user in os.listdir(data_path):
 
         image = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
 
-        # 🔥 FIX: Resize all faces to same size
+        #  FIX: Resize all faces to same size
         image = cv2.resize(image, (200, 200))
 
         faces.append(image)
@@ -32,4 +32,4 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.train(faces, labels)
 recognizer.save("face_model.yml")
 
-print("✅ Training Completed Successfully!")
+print(" Training Completed Successfully!")
